@@ -1,0 +1,81 @@
+syntax = "v1"
+
+info(
+    title: "type title here"
+    desc: "type desc here"
+    author: "type author here"
+    email: "type email here"
+    version: "type version here"
+)
+
+
+type request {
+    // TODO: add members here and delete this comment
+}
+
+type response {
+    // TODO: add members here and delete this comment
+}
+
+@server(
+    middleware : CheckLogin
+)
+
+service Programme {
+    @handler SaveConfig
+    post /v1/programme/Index/saveConfig (request) returns (response)
+
+    @handler GetPlayInfo
+    get /v1/programme/Index/getPlayInfo (request) returns (response)
+
+    @handler GetList
+    get /v1/programme/Index/getList  (request) returns (response)
+
+    @handler RadioSyncConfig
+    post /v1/programme/Index/syncConfig (request) returns (response)
+
+    @handler SaveBillType
+    post /v1/programme/Index/saveBillType (request) returns (response)
+
+    @handler GetListByChannel
+    get /v1/programme/Index/getListByChannel (request) returns (response)
+
+    @handler RadioSaveConfig
+    post /v1/programme/Radio/saveConfig (request) returns (response)
+
+    @handler RadioGetPlayInfo
+    get /v1/programme/Radio/getPlayInfo (request) returns (response)
+
+    @handler RadioGetList
+    get /v1/programme/Radio/getList  (request) returns (response)
+
+    @handler RadioRadioSyncConfig
+    post /v1/programme/Radio/syncConfig (request) returns (response)
+
+    @handler RadioSaveBillType
+    post /v1/programme/Radio/saveBillType (request) returns (response)
+
+    @handler RadioGetListByChannel
+    get /v1/programme/Radio/getListByChannel (request) returns (response)
+}
+
+
+service Programme {
+    @handler GetBillPlayInfo
+    get /v1/programme/Index/getBillPlayInfo (request) returns (response)
+
+    @handler ReplayOpRadio
+    post /v1/programme/Index/replayOpRadio (request) returns (response)
+
+    @handler SetRadioRebroadcast
+    post /v1/programme/Index/setRadioRebroadcast (request) returns (response)
+
+    @handler RadioGetBillPlayInfo
+    get /v1/programme/Radio/getBillPlayInfo (request) returns (response)
+
+    @handler RadioReplayOpRadio
+    post /v1/programme/Radio/replayOpRadio (request) returns (response)
+
+    @handler RadioSetRadioRebroadcast
+    post /v1/programme/Radio/setRadioRebroadcast (request) returns (response)
+}

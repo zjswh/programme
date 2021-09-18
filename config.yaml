@@ -1,0 +1,44 @@
+mysql:
+  username: "kkyoo"
+  password: "kkyoo_aodian_2011_06_11"
+  path: "rm-bp18a48nlw7l184ed.mysql.rds.aliyuncs.com:3306"
+  db-name: "broadcast_cloud"
+  config: "charset=utf8&parseTime=True&loc=Local"
+  max-idle-conns: 20
+  max-open-conns: 20
+  log-mode: false
+
+redis:
+  addr: 'r-bp1zmdndes4r8gv4cx.redis.rds.aliyuncs.com:6379'
+  password: 'dEQZJK6yPR'
+  db: 0
+  
+system:
+  env: 'public'  # Change to "develop" to skip authentication for development mode
+  addr: 8002
+  db-type: "mysql"  # support mysql/sqlite
+
+jwt:
+  signing-key: "guangdianyun_key"
+
+Log:
+  path: "logs"
+  name: "system.log"
+
+email:
+  host: ""
+  port: 465
+  user: ""
+  pass: ""
+  admin-user: ""
+
+param:
+  activity-host: "http://pubdev.guangdianyun.tv"
+  web-host: "https://web.guangdianyun.tv"
+  project-host: "http://votedev.guangdianyun.tv"
+  cron-host: "http://cron.guangdianyun.tv"
+  message-host: "http://pubdev.guangdianyun.tv"
+  es-host: "http://47.114.200.123"
+  b-gateway-host: "http://consoleapi.guangdianyun.tv"
+  dirty-filter-host : "http://47.110.188.74"
+  x-ca-stage: "test"
